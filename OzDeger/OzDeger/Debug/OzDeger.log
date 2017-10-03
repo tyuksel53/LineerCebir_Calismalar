@@ -1,3 +1,4 @@
 ﻿  OzDeger.c
-  OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\OzDeger\Debug\OzDeger.exe
-  OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\OzDeger\Debug\OzDeger.pdb (Partial PDB)
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(139): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.exe
+  OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.pdb (Partial PDB)
