@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 /*
-	author: tyuksel
+	author: tyuksel53
 	date:	8.10.2017
 */
 void file_write(int boyut, int **matris)
@@ -47,13 +47,13 @@ void alt_matris(int MatrisBoyut, int subBoyut, int **matris, int SiLsatir, int S
 			if (i != SiLsatir && j != SiLsutun) // satýr ve sutunu sil
 			{
 				suBmatris[satir][sutun] = matris[i][j];
-				satir++;
+				sutun++;
 			}
 		}
-		if (satir == subBoyut)
+		if (sutun == subBoyut)
 		{
-			satir = 0;
-			sutun++;
+			sutun = 0;
+			satir++;
 		}
 	}
 

@@ -25,8 +25,62 @@ int main()
 			sayac++;
 		}
 	}
-	alt_matrisBul(matris_boyut, matris);
 
+	/*matris[0][0] = 3;
+	matris[0][1] = 4;
+	matris[0][2] = 1;
+	matris[0][3] = 5;
+	matris[1][0] = 5;
+	matris[1][1] = 6;
+	matris[1][2] = 2;
+	matris[1][3] = 3;
+	matris[2][0] = 4;
+	matris[2][1] = 6;
+	matris[2][2] = 10;
+	matris[2][3] = 23;
+	matris[3][0] = 24;
+	matris[3][1] = 12;
+	matris[3][2] = 3;
+	matris[3][3] = 5;*/
+
+	matris[0][0] = 2;
+	matris[0][1] = 5;
+	matris[0][2] = 4;
+	matris[0][3] = 1;
+	matris[0][4] = 6;
+	matris[1][0] = 4;
+	matris[1][1] = 6;
+	matris[1][2] = 7;
+	matris[1][3] = 1;
+	matris[1][4] = 3;
+	matris[2][0] = 4;
+	matris[2][1] = 2;
+	matris[2][2] = 6;
+	matris[2][3] = 6;
+	matris[2][4] = 10;
+	matris[3][0] = 23;
+	matris[3][1] = 14;
+	matris[3][2] = 15;
+	matris[3][3] = 3;
+	matris[3][4] = 6;
+	matris[4][0] = 13;
+	matris[4][1] = 24;
+	matris[4][2] = 24;
+	matris[4][3] = 23;
+	matris[4][4] = 11;
+
+	/*matris[0][0] = 3;
+	matris[0][1] = 4;
+	matris[0][2] = 2;
+	matris[1][0] = 7;
+	matris[1][1] = 8;
+	matris[1][2] = 10;
+	matris[2][0] = 23;
+	matris[2][1] = 12;
+	matris[2][2] = 4;*/
+
+	determinantBul(matris_boyut, matris);
+	//alt_matrisBul(matris_boyut, matris);
 	printf("Kac tane sayi uretmek istiyorsunuz ?\n");
 	
 	int rastgeleMiktar = 0;

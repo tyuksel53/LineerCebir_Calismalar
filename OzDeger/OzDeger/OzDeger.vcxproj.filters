@@ -21,5 +21,8 @@
     <ClCompile Include="AltMatris_Source.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixDeterminant.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

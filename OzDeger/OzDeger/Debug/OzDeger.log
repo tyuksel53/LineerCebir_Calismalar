@@ -1,5 +1,5 @@
 ﻿  OzDeger.c
-c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(28): warning C4013: 'alt_matrisBul' undefined; assuming extern returning int
-c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(52): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(82): warning C4013: 'determinantBul' undefined; assuming extern returning int
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(106): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
   OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.exe
   OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.pdb (Partial PDB)
