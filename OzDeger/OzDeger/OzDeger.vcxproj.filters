@@ -18,5 +18,8 @@
     <ClCompile Include="OzDeger.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AltMatris_Source.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
