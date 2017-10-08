@@ -1,4 +1,8 @@
 ﻿  OzDeger.c
-c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(139): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(15): warning C4013: 'strcat' undefined; assuming extern returning int
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(79): warning C4101: 'sutun': unreferenced local variable
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(79): warning C4101: 'satir': unreferenced local variable
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(144): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\taha\documents\visual studio 2017\projects\sub-matrix-and-eigenvalue\ozdeger\ozdeger\ozdeger.c(75): warning C4716: 'alt_matris': must return a value
   OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.exe
   OzDeger.vcxproj -> C:\Users\Taha\Documents\Visual Studio 2017\Projects\Sub-Matrix-and-Eigenvalue\OzDeger\Debug\OzDeger.pdb (Partial PDB)

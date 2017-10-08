@@ -1,118 +1,123 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#define SIZE 10;
+#define DOSYA_YOLU = "C:\\users\\taha\\desktop\\"
+
 int *rastgeleSayi_Uret(int sayiMiktari);
-/*void yaz(int boyut, int matrix[4][4])
+
+void ekrana_yaz(int boyut, int **matris)
 {
-	for (int i = 0; i < boyut; i++)
+	char str[200] = "C:\\users\\taha\\desktop\\";
+	char snum[12];
+	sprintf(snum, "%d", boyut);
+	strcat(str, snum);
+	strcat(str, "submatrix.txt");
+	FILE *fp;
+	fp = fopen(str, "a");
+	int i, j;
+	for (i = 0; i < boyut; i++)
 	{
-		for (int j = 0; j < boyut; j++)
+		for (j = 0; j < boyut; j++)
 		{
+			//printf("%d ", matris[i][j]);
+			fprintf(fp, "%d ",matris[i][j]);
 
-				printf("%d ", matrix[i][j]);
+		}
+		//printf("\n");
+		fprintf(fp, "\n");
+	}
+	fprintf(fp, "\n");
+	fclose(fp);
+	//printf("\n\n------>Ekrana Yazildi\n\n");
+	
+}
+void **alt_matris(int MatrisBoyut,int subBoyut, int **matris,int SiLsatir,int SiLsutun)
+{
+	int i, j;
+	int **suBmatris = (int **)malloc(sizeof(int) * subBoyut - 1);
+	int satir = 0;
+	int sutun = 0;
+	for (i = 0; i < subBoyut; i++)
+	{
+		suBmatris[i] = (int *)malloc(sizeof(int)* subBoyut - 1);
+	}
+	for (i = 0; i < MatrisBoyut; i++)
+	{
+		for (j = 0; j < MatrisBoyut; j++)
+		{
+			if (i != SiLsatir && j != SiLsutun)
+			{
+				suBmatris[satir][sutun] = matris[i][j];
+				satir++;
+			}	
+		}
+		if (satir == subBoyut)
+		{
+			satir = 0;
+			sutun++;
+		}
+	}
+	ekrana_yaz(subBoyut, suBmatris);
+	if (subBoyut != 2)
+	{
+		for (i = 0; i < subBoyut; i++)
+		{
+			for (j = 0; j < subBoyut; j++)
+			{
+				alt_matris(subBoyut, subBoyut - 1, suBmatris, i, j);
+			}
+		}
+	}
 
+	//return suBmatris;
+}
+void alt_matrisBul(int boyut, int **matris)
+{
+	int i, j;
+	int satir, sutun;
+	for (i = 0; i < boyut; i++)
+	{
+		for (j = 0; j < boyut; j++)
+		{
+			////int **suBmatris;
+			///suBmatris =
+			alt_matris(boyut, boyut-1, matris, i, j);
+			/////////ekrana_yaz(boyut-1, suBmatris);
+		}
+		//printf("\n");
+	}
+
+	for (i = 0; i < boyut; i++)
+	{
+		for (j = 0; j < boyut; j++)
+		{
+			printf("%d ", matris[i][j]);
 		}
 		printf("\n");
 	}
-}
-void determinat_bul(int boyut, int matrix[4][4],int satir ,int sutun,int division)
-{
-	int i, j,k,t;
-	if (division==boyut)
-	{
-		for (i = 0; i < boyut; i++)
-		{
-			for (j = 0; j < boyut; j++)
-			{
-				int *arr = (int *)malloc(boyut-1 * boyut-1 * sizeof(int));
-				for (k = 0; k < boyut; k++)
-				{
-					for ( t = 0; t < boyut; t++)
-					{
-						if (k != i && t != j)
-						{
-
-						}
-					}
-				}
-				for
-				determinat_bul(boyut, matrix, satir, sutun,division-1);
-			}
-			printf("\n");
-		}
-	}
-	else if(division >= 2)
-	{
-		for (i = 0; i < boyut; i++)
-		{
-			for (j = 0; j < boyut; j++)
-			{ 
-				for (int k = 0; k < boyut - division; k++)
-				{
-					if (satir != i && sutun != j)
-					{
-						printf("%d ", matrix[i][j]);
-					}
-				}
-				
-			}
-			printf("\n");
-		}
-		printf("\nDongu bir");
-	}else
-	{
-		return;
-	}
 	
 }
-*/
 int main()
 {
-	///printf("Hello World\n");
-	//int x=5;
-	/*int i;
-	int tmp = -999;
-	int terim1 = -6, terim2 = -2;
-	printf("x^2 %dx %d\n", terim2 + terim1, terim1*terim2);
-	for (i = 1; i <= abs(terim1*terim2); i++)
+	int matris_boyut = 5;
+	int **matris = (int **)malloc(sizeof(int) * matris_boyut);
+	int i, j;
+	for (i = 0; i < matris_boyut; i++)
 	{
-		if (terim1*terim2 % i == 0)
-		{
-			tmp = (i*i + ((terim1 + terim2)*i) + (terim1 * terim2));
-			if (tmp == 0)
-			{
-				printf("Denklemin koklerinden biri: %d\n", i);
-			}
-
-		}
-		if (terim1*terim2 % -i == 0)
-		{
-			i = i * -1;
-			tmp = (i*i + ((terim1 + terim2)*i) + (terim1 * terim2));
-			if (tmp == 0)
-			{
-				printf("Denklemin koklerinden biri: %d\n", i);
-			}
-			i = i* -1;
-
-		}
+		matris[i] = (int *)malloc(sizeof(int)* matris_boyut);
 	}
-	int matrix[4][4];
 	int sayac = 1;
-	for (int i = 0; i < 4; i++)
+	for (i = 0; i < matris_boyut; i++)
 	{
-		for (int j = 0; j < 4; j++)
+		for (j = 0; j < matris_boyut; j++)
 		{
-
-			matrix[i][j] = sayac;
+			matris[i][j] = sayac;
 			sayac++;
 		}
 	}
-	int dizi[2] = { 0,0 };
-	//yaz(4, matrix);
-	determinat_bul(4,matrix,0,0,4);*/
+	alt_matrisBul(matris_boyut, matris);
 
 	printf("Kac tane sayi uretmek istiyorsunuz ?\n");
 	
